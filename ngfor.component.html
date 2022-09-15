@@ -1,0 +1,40 @@
+<!-- <h1></h1>
+<div *ngFor="let movie of movies">
+    
+    <div>
+        <h2>{{movie.title}}  |   {{movie.director}}       {{movie.cast}}    {{movie.releaseDate}}</h2>
+    </div>
+    
+</div>
+<nav *ngFor="let movie of movies" >
+    {{movie.title}}  |  <div> {{movie.director}}</div>       {{movie.cast}}    {{movie.releaseDate}}
+</nav> -->
+<h1 style="background-color: rgb(221, 64, 169);">Top Singers in India</h1>
+<table border="2px">
+    <tbody>
+        <th class="co"> Singer Name</th>
+        <th class="co">Total Song</th>
+        <th class="co">Favourite Song</th>
+        <th class="co">Released Date</th>
+        <!-- <th><table> </table></th> -->
+        <tr *ngFor="let singer of singers">
+        <td><li>{{singer.SingerName}}</li></td>
+        <td><li>{{singer.totalSong}}</li></td>
+        <td><li>{{singer.favSong}}</li></td>
+        <td><li>{{singer.releaseDate}}</li></td>
+        
+        </tr>
+    </tbody>
+</table>
+<br>
+-----------------------------------------------------------------------------------
+<h1 style="background-color: rgb(221, 64, 169);"> Singers For Greater Then 50 Songs </h1>
+<div *ngFor="let singer of singers">
+    <div *ngIf="singer.totalSong>50">
+        <li class="co">Singer Name==> {{singer.SingerName}}</li>
+        <li >Total Songs==> {{singer.totalSong}}</li>
+        <li class="co2">Favaourite Song==> {{singer.favSong}}</li>
+        <li>Released Date==> {{singer.releaseDate}}</li>
+        ---------------------------------------------------
+    </div>
+</div>
